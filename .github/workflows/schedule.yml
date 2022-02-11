@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
         scraping_hub_key: ${{secrets.SCRAPING_HUB_KEY }}
-#         run: echo "The API key is:${{scraping_hub_key}}"
+        run: echo "The API key is:${{secrets.SCRAPING_HUB_KEY}}"
 
     steps:
       - name: Checkout repository content
