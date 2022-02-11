@@ -1,0 +1,6 @@
+name: schedule-cron
+env:
+  scarping_hub: ${{ secrets.SCRAPING_HUB_KEY }}
+on:
+  schedule:
+    - cron:  "* * * * *"
