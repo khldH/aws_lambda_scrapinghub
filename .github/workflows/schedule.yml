@@ -25,6 +25,5 @@ jobs:
       
       
       - name: Execute Python script # Run the app.py
-        env:
-          scraping_hub: ${{secrets.SCRAPING_HUB_KEY }}
-        run: python handler.py
+        run: echo "The API key is:${{secrets.SCRAPING_HUB_KEY }}"
+#         run: python handler.py
