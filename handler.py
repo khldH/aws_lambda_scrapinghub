@@ -10,6 +10,8 @@ def lambda_handler(event, context):
     project = client.get_project(494606)
     spider = project.spiders.get('job')
     spider.jobs.run(job_settings={'DELTAFETCH_ENABLED': 'False'})
+    print(scraping_hub_key)
+    print(project.spiders)
 
     body = {
         "message": "success!",
