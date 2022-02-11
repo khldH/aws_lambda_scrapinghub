@@ -3,13 +3,13 @@ name: cron
 on:
   workflow_dispatch:
   schedule:
-  - cron: "* * * * *"
+  - cron: "0 * * * *"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
-        scraping_hub_key: ${{secrets.SCRAPING_HUB_KEY }}
+        SCRAPING_HUB_KEY: ${{secrets.SCRAPING_HUB_KEY }}
         run: echo "The API key is:${{secrets.SCRAPING_HUB_KEY}}"
 
     steps:
@@ -28,6 +28,6 @@ jobs:
       
       
       - name: Execute Python script # Run the app.py
-        run: |
-          SCRAPING_HUB_KEY=${{secrets.SCRAPING_HUB_KEY }}  python handler.py
-#         run: python handler.py
+#         run: |
+#           SCRAPING_HUB_KEY=${{secrets.SCRAPING_HUB_KEY }}  python handler.py
+        run: python handler.py
