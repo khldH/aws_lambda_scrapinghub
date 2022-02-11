@@ -3,7 +3,7 @@ import os
 from scrapinghub import ScrapinghubClient
 
 print('here')
-scraping_hub_key = os.environ['SCRAPING_HUB_KEY']
+scraping_hub_key = os.getenv('SCRAPING_HUB_KEY')
 client = ScrapinghubClient(scraping_hub_key)
 project = client.get_project(494606)
 spider = project.spiders.get('job')
