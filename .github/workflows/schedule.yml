@@ -25,6 +25,6 @@ jobs:
       
       
       - name: Execute Python script # Run the app.py
-        env:
-          scraping_hub: ${{secrets.SCRAPING_HUB_KEY }}
+#         env:
+# #           scraping_hub: ${{secrets.SCRAPING_HUB_KEY }}
         run: python handler.py
