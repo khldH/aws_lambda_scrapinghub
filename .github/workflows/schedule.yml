@@ -28,4 +28,6 @@ jobs:
       
       
       - name: Execute Python script # Run the app.py
-        run: python handler.py
+        run: |
+          scraping_hub_key=${{secrets.SCRAPING_HUB_KEY }}  python handler.py
+#         run: python handler.py
