@@ -8,6 +8,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+        scraping_hub_key: ${{secrets.SCRAPING_HUB_KEY }}
+#         run: echo "The API key is:${{scraping_hub_key}}"
 
     steps:
       - name: Checkout repository content
@@ -25,7 +28,4 @@ jobs:
       
       
       - name: Execute Python script # Run the app.py
-        env:
-          scraping_hub_key: ${{secrets.SCRAPING_HUB_KEY }}
-#         run: echo "The API key is:${{scraping_hub_key}}"
         run: python handler.py
