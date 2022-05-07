@@ -1,5 +1,4 @@
 name: cron
-
 on:
   workflow_dispatch:
   schedule:
